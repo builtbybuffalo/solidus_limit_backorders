@@ -1,6 +1,6 @@
 module SpreeLimitBackorders::Extensions::Controllers::Admin::StockItemsController
   def self.prepended(klass)
-    klass.before_filter :set_max_backorders, only: :update
+    klass.before_action :set_max_backorders, only: :update
   end
 
 private
